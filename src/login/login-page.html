@@ -1,13 +1,16 @@
-<h1>Login</h1>
-<div data-ng-bind="$ctrl.loginTitle"></div>
+<h1 class="show-left">Login</h1>
+<div class="show-left" data-ng-bind="$ctrl.loginTitle"></div>
 
-<div class="row">
-    <form class="form-control">
-        <!-- <div class="form-group"></div> -->
-        <label class="col-md-6">{{'USER_NAME' | translate}}</label>
-        <input class="form-control" name="username" type="text">
-        <label class="col-md-6">{{'PASSWORD' | translate}}</label>
-        <input class="form-control" name="password" type="password">
+<div class="row show-left">
+    <form>
+        <div class="form-group">
+            <label class="col-md-6">{{'USER_NAME' | translate}}</label>
+            <input class="form-control" name="username" type="text">
+        </div>
+        <div class="form-group">
+            <label class="col-md-6">{{'PASSWORD' | translate}}</label>
+            <input class="form-control" name="password" type="password">
+        </div>
         <div class="col-md-12 text-center">
             <button class="btn btn-default" translate="LOGIN"></button>
         </div>
