@@ -1,5 +1,5 @@
 import Mdle from '../common/mdle';
-import loginPage from './home-page';
+import loginPage from './login-page';
 import book from './book/book';
 import chapter from './chapter/chapter';
 
