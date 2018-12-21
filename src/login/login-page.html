@@ -18,5 +18,19 @@
     </form>
 </div>
 
+<p>----------------------------------------------------------------------------------</p>
+<h1 class="show-left" data-translate="ALL_USER"></h1>
+
+<div class="row show-left">
+  <div id="divUserList" class="col-sm-10 userList">
+    <div data-ng-repeat="login in $ctrl.logins">
+      <p class="pUser" data-ng-bind="login.username"></p>
+      <p class="pUser" data-ng-bind="login.password"></p>
+    </div>
+  </div>
+  <!-- <div data-ng-bind="$ctrl.users.length"></div> -->
+  <!-- <p class="pUser" data-translate="ERROR_500"></p> -->
+</div>
+
 
 

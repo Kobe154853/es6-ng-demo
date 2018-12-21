@@ -2,5 +2,6 @@
   "LOGIN": "Login",
   "USER_NAME": "User Name",
   "PASSWORD": "Password",
-  "WELCOME_LOGIN": "welcome to login"
+  "WELCOME_LOGIN": "Welcome to login",
+  "ALL_USER": "All Users"
 }

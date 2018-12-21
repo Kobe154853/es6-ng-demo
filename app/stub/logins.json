@@ -1,0 +1,18 @@
+[
+  {
+    "username": "张三",
+    "password": "123456"
+  },
+  {
+    "username": "李四",
+    "password": "123456"
+  },
+  {
+    "username": "王五",
+    "password": "123456"
+  },
+  {
+    "username": "赵六",
+    "password": "123456"
+  }
+]
