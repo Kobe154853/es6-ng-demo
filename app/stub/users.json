@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Superman",
+    "location": "Atfjow Gwofe",
+    "age": 20
+  },
+  {
+    "name": "Batman1",
+    "location": "Wayne Manor",
+    "age": 20
+  },
+  {
+    "name": "Batman2",
+    "location": "Wayne Manor",
+    "age": 20
+  },
+  {
+    "name": "Batman3",
+    "location": "Wayne Manor",
+    "age": 20
+  },
+  {
+    "name": "Batman4",
+    "location": "Wayne Manor",
+    "age": 20
+  },
+  {
+    "name": "Batman5",
+    "location": "Wayne Manor",
+    "age": 20
+  },
+  {
+    "name": "Batman6",
+    "location": "Wayne Manor", 
+    "age": 20
+  }
+]

@@ -1,5 +1,6 @@
 {
   "LOGIN": "登录",
   "USER_NAME": "用户名",
-  "PASSWORD": "密  码"
+  "PASSWORD": "密  码",
+  "WELCOME_LOGIN": "欢迎登录"
 }

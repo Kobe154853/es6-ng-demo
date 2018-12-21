@@ -4,7 +4,7 @@ import book from './book/book';
 import chapter from './chapter/chapter';
 
 const name = 'home';
-let mdle = Mdle(name, [
+let mdle = Mdle(name, [ 
   book.name,
   chapter.name,
 ]);

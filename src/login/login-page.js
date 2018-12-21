@@ -10,22 +10,26 @@ const controller = ['$http', function ($http) {
   this.loginTitle = 'I am login';
   this.$http = $http;
   this.loginnew = function () {
-    // $http({
+    $http({
 
-    //   method: 'post',
+      method: 'post',
+      headers: {
+        "Content-Type": "application/json;charset = utf-8",
+        "Access-Control-Allow-Origin" :"*"
+      },
+      url: 'http://localhost:8081/api/login',
 
-    //   url: 'http://localhost:8081/api/login',
+      data: JSON.stringify({
+        username: "张三",
+        password: "123456"
+      })
 
-    //   data: {
-    //     "username": "张三",
-    //     "password": "123456"
-    //   }
-
-    // })
-    $http.post("http://localhost:8081/api/login",{'username':'张三','password':'123456'}).success(function(data){ 
-    var a = new console();
-    a.log(data);
-    });
+    })
+    // $http.post("http://localhost:8081/api/login","{'username':'张三','password':'123456'}")
+    // .success(function(data){ 
+    // var a = new console();
+    // a.log(data);
+    //});
   }
 }];
 
