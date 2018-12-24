@@ -1,36 +1,45 @@
 
-<h1 class="show-left">{{'WELCOME_LOGIN' | translate}}</h1>
-<div class="show-left" data-ng-bind="$ctrl.loginTitle"></div>
+<section class="material-half-bg">
+  <div class="cover"></div>
+</section>
 
-<div class="row show-left">
-    <form>
-        <div class="form-group">
-            <label class="col-md-6">{{'USER_NAME' | translate}}</label>
-            <input class="form-control" name="username" type="text">
-        </div>
-        <div class="form-group">
-            <label class="col-md-6">{{'PASSWORD' | translate}}</label>
-            <input class="form-control" name="password" type="password">
-        </div>
-        <div class="col-md-12 text-center">
-    <button class="btn btn-default" translate="LOGIN" ng-click="$ctrl.loginnew()"></button>
-        </div>
-    </form>
-</div>
+<div>
+<section class="login-content">
 
-<p>----------------------------------------------------------------------------------</p>
-<h1 class="show-left" data-translate="ALL_USER"></h1>
-
-<div class="row show-left">
-  <div id="divUserList" class="col-sm-10 userList">
-    <div data-ng-repeat="login in $ctrl.logins">
-      <p class="pUser" data-ng-bind="login.username"></p>
-      <p class="pUser" data-ng-bind="login.password"></p>
-    </div>
+  <div class="logo">
+    <h1>{{'WELCOME_LOGIN' | translate}}</h1>
   </div>
-  <!-- <div data-ng-bind="$ctrl.users.length"></div> -->
-  <!-- <p class="pUser" data-translate="ERROR_500"></p> -->
+  <div class="login-box">
+    <form class="login-form">
+      <h3 class="login-head">
+        <i class="fa fa-lg fa-fw fa-user"></i>
+        用户</h3>
+      <div class="form-group">
+        <label class="control-lable">{{'USER_NAME' | translate}}</label>
+<input class="form-control" name="username" type="text" placeholder="User Name" ng-model="$ctrl.username" required
+  oninvalid="setCustomValidity('请输入用户名');" oninput="setCustomValidity('');">
+      </div>
+      <div class="form-group">
+        <label class="control-lable">{{'PASSWORD' | translate}}</label>
+<input class="form-control" name="password" type="password" placeholder="Password" ng-model="$ctrl.password" required="required"
+  required oninvalid="setCustomValidity('请输入密码');" oninput="setCustomValidity('');">
+      </div>
+      <!-- <div class="form-group">
+            <div class="utility">
+                <div class="animated-checkbox">
+                    <label>
+                        <input type="checkbox"><span class="label-text">Stay Signed in</span>
+                    </label>
+                </div>
+                <p class="semibold-text mb-2"><a href="#" data-toggle="flip">Forgot Password ?</a></p>
+            </div>
+        </div> -->
+      <div class="form-group btn-container text-center">
+<button class="btn btn-primary btn-block" translate="LOGIN" ng-click="$ctrl.loginnew()" placeholder="回车添加，设置日期点右侧"
+  ng-keypress="($event.which === 13)?addTask():0"></button>
+      </div>
+    </form>
+  </div>
+</section>
 </div>
-
-
 

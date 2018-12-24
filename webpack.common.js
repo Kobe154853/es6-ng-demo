@@ -42,7 +42,7 @@ module.exports = {
     }
   },
   resolve: {
-    extensions: ['.js', '.tsx', '.ts',]
+    extensions: ['.js', '.tsx', '.ts', ]
   },
   output: {
     filename: '[name]/[name].min.js',
@@ -50,21 +50,26 @@ module.exports = {
     path: path.resolve(__dirname, 'app/pages')
   },
   module: {
-    rules: [
-      {
+    rules: [{
         enforce: "pre",
         test: /\.p?css$/,
         use: [
           'style-loader',
-          { loader: 'css-loader', options: { importLoaders: 1 } },
           {
-            loader: 'postcss-loader', options: {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
               ident: 'postcss',
               plugins: () => [
                 postcssPresetEnv({
                   browsers: 'last 2 versions',
                   stage: 0
-                }/* pluginOptions */)
+                } /* pluginOptions */ )
               ]
             }
           }
@@ -96,6 +101,18 @@ module.exports = {
       }
     ]
   },
+  // devServer: {
+  //   proxy: {
+  //     proxy: {
+  //       '/api': {
+  //         target: 'http://localhost:8000',
+  //         pathRewrite: {
+  //           '^/api': ''
+  //         }
+  //       }
+  //     }
+  //   }
+  // },
   plugins: [
     new CleanWebpackPlugin(['app/pages']),
     // new webpack.ProvidePlugin({

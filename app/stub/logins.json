@@ -1,17 +1,26 @@
 [
   {
+    "role":"1",
+    "username": "admin",
+    "password": "admin"
+  },
+  {
+    "role": "0",
     "username": "张三",
     "password": "123456"
   },
   {
+    "role": "0",
     "username": "李四",
     "password": "123456"
   },
   {
+    "role": "0",
     "username": "王五",
     "password": "123456"
   },
   {
+    "role": "0",
     "username": "赵六",
     "password": "123456"
   }
