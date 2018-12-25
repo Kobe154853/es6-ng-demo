@@ -11,3 +11,7 @@ node_modules
 app/lib
 app/web/modern
 app/web/config
+
+# Customer ignore
+
+app/pages
