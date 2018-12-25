@@ -1,37 +1,43 @@
-[
+[{
+    "role": "1",
+    "username": "admin",
+    "password": "admin",
+    "location": "Global",
+    "age": 100
+  },
   {
-    "name": "Superman",
-    "location": "Atfjow Gwofe",
+    "role": "0",
+    "username": "张三",
+    "password": "123",
+    "location": "西安",
     "age": 20
   },
   {
-    "name": "Batman1",
-    "location": "Wayne Manor",
-    "age": 20
+    "role": "0",
+    "username": "李四",
+    "password": "123",
+    "location": "北京",
+    "age": 19
   },
   {
-    "name": "Batman2",
-    "location": "Wayne Manor",
-    "age": 20
+    "role": "0",
+    "username": "王五",
+    "password": "123",
+    "location": "上海",
+    "age": 21
   },
   {
-    "name": "Batman3",
-    "location": "Wayne Manor",
-    "age": 20
+    "role": "0",
+    "username": "赵六",
+    "password": "123",
+    "location": "广州",
+    "age": 17
   },
   {
-    "name": "Batman4",
-    "location": "Wayne Manor",
-    "age": 20
-  },
-  {
-    "name": "Batman5",
-    "location": "Wayne Manor",
-    "age": 20
-  },
-  {
-    "name": "Batman6",
-    "location": "Wayne Manor", 
-    "age": 20
+    "role": "0",
+    "username": "陈珂",
+    "password": "123",
+    "location": "渭南",
+    "age": 18
   }
 ]

@@ -1,4 +1,6 @@
-import {  log  } from "../common/util";
+import {
+  log
+} from "../common/util";
 import template from './login-page.html';
 
 // import $http from 'angular';
@@ -17,10 +19,10 @@ const controller = function (loginService) {
     // log(resp);
     //log(this);
     this.logins = resp.data;
-    //log(this.logins);
+    log(this.logins);
   })
   this.loginnew = function () {
-    
+
     // let username = this.username;
     // alert(username);
     // let password = this.password;
@@ -29,33 +31,39 @@ const controller = function (loginService) {
     this.logins.forEach(loginUser => {
       if (loginUser.username == this.username && loginUser.password == this.password) {
         //alert("login successfully");
-        log(loginUser.role == 1 ? "login successfully,you are admin" : "login successfully,you are common user");
+        if (loginUser.role == 1) {
+          log("login successfully,you are admin");
+        }else{
+          location.href = '/pages/user/index.html';
+          log("login successfully,you are common user");
+        }
+        //log(loginUser.role == 1 ? "login successfully,you are admin" : "login successfully,you are common user");
         flag = true;
       }
     });
     if (!flag) {
       log("wrong username or password");
     }
-  //   $http({
+    //   $http({
 
-  //     method: 'post',
-  //     headers: {
-  //       "Content-Type": "application/json;charset = utf-8",
-  //     },
-  //     url: 'http://localhost:8081/api/login',
+    //     method: 'post',
+    //     headers: {
+    //       "Content-Type": "application/json;charset = utf-8",
+    //     },
+    //     url: 'http://localhost:8081/api/login',
 
-  //     data: JSON.stringify({
-  //       username: "张三",
-  //       password: "123456"
-  //     })
+    //     data: JSON.stringify({
+    //       username: "张三",
+    //       password: "123456"
+    //     })
 
-  //   })
+    //   })
 
-  //   // $http.post("http://localhost:8081/api/login","{'username':'张三','password':'123456'}")
-  //   // .success(function(data){ 
-  //   // var a = new console();
-  //   // a.log(data);
-  //   //});
+    //   // $http.post("http://localhost:8081/api/login","{'username':'张三','password':'123456'}")
+    //   // .success(function(data){ 
+    //   // var a = new console();
+    //   // a.log(data);
+    //   //});
   }
 
 };

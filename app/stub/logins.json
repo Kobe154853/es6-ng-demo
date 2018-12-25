@@ -2,26 +2,43 @@
   {
     "role":"1",
     "username": "admin",
-    "password": "admin"
+    "password": "admin",
+    "location": "Global",
+    "age": 100
   },
   {
     "role": "0",
     "username": "张三",
-    "password": "123456"
+    "password": "123",
+    "location": "西安",
+    "age": 20
   },
   {
     "role": "0",
     "username": "李四",
-    "password": "123456"
+    "password": "123",
+    "location": "北京",
+    "age": 19
   },
   {
     "role": "0",
     "username": "王五",
-    "password": "123456"
+    "password": "123",
+    "location": "上海",
+    "age": 21
   },
   {
     "role": "0",
     "username": "赵六",
-    "password": "123456"
+    "password": "123",
+    "location": "广州",
+    "age": 17
+  },
+  {
+    "role": "0",
+    "username": "陈珂",
+    "password": "123",
+    "location": "渭南",
+    "age": 18
   }
 ]
