@@ -22,7 +22,6 @@ const controller = function (loginService) {
     log(this.logins);
   })
   this.loginnew = function () {
-
     // let username = this.username;
     // alert(username);
     // let password = this.password;
@@ -31,12 +30,9 @@ const controller = function (loginService) {
     this.logins.forEach(loginUser => {
       if (loginUser.username == this.username && loginUser.password == this.password) {
         //alert("login successfully");
-        if (loginUser.role == 1) {
-          log("login successfully,you are admin");
-        }else{
-          log("login successfully,you are common user");
-          location.href = '/pages/user/index.html';
-        }
+        //alert(loginUser.role);
+        location.href = '/pages/user/index.html?roleId='+loginUser.role;
+
         log(loginUser.role == 1 ? "login successfully,you are admin" : "login successfully,you are common user");
         flag = true;
       }

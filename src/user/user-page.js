@@ -1,4 +1,4 @@
-import {log} from "../common/util";
+import { log, Ramda } from "../common/util";
 import template from './user-page.html';
 // import $http from 'angular';
 
@@ -6,16 +6,31 @@ import template from './user-page.html';
 const name = 'userPage'; //<login-page></login-page>
 const bindings = {};
 
-const controller = function(userService){
+const controller = function (userService,filterFilter) {
   'ngInject'
   this.userTitle = 'I am user.......';
   this.users = [];
+  this.allUsers = [];
+  this.nameFilter = 'work';
   userService.fetch().then(resp => {
     // log(resp);
-    log(this);
+    var roleid = location.search.substr(8, 1);
+    log(roleid);
     this.users = resp.data;
+    this.allUsers = resp.data;
     log(this.users);
   })
+  this.filterUserNameByRamda = function () {
+    this.users = Ramda.filter(user => {
+      return Ramda.contains(this.nameFilter, user.name);
+    }, this.allUsers);
+  };
+  this.filterUserName = function () {
+    this.users = filterFilter(this.allUsers, this.nameFilter);
+  };
+  
+
+  
 };
 
 // const controller = ['$http', function ($http) {
