@@ -11,7 +11,7 @@ const controller = function (userService,filterFilter) {
   this.userTitle = 'I am user.......';
   this.users = [];
   this.allUsers = [];
-  this.nameFilter = 'work';
+  this.nameFilter = 'admin';
   userService.fetch().then(resp => {
     // log(resp);
     var roleid = location.search.substr(8, 1);

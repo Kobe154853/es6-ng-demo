@@ -1,44 +1,55 @@
-[
-  {
-    "role":"1",
+[{
+    "id": "1",
+    "role": "1",
     "username": "admin",
     "password": "admin",
     "location": "Global",
-    "age": 100
+    "age": 100,
+    "email": "1234567@163.com"
   },
   {
+    "id": "2",
     "role": "0",
     "username": "张三",
     "password": "123",
     "location": "西安",
-    "age": 20
+    "age": 20,
+    "email": "1234567@163.com"
   },
   {
+    "id": "3",
     "role": "0",
     "username": "李四",
     "password": "123",
     "location": "北京",
-    "age": 19
+    "age": 19,
+    "email": "1234567@163.com"
   },
   {
+    "id": "4",
     "role": "0",
     "username": "王五",
     "password": "123",
     "location": "上海",
-    "age": 21
+    "age": 21,
+    "email": "1234567@163.com"
   },
   {
+    "id": "5",
     "role": "0",
     "username": "赵六",
     "password": "123",
     "location": "广州",
-    "age": 17
+    "age": 17,
+    "email": "1234567@163.com"
   },
   {
+    "id": "6",
     "role": "0",
     "username": "陈珂",
     "password": "123",
     "location": "渭南",
-    "age": 18
+    "age": 18,
+    "email": "1234567@163.com"
   }
 ]

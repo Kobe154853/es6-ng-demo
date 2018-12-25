@@ -1,7 +1,7 @@
 
 <div class="tile">
   <h3 data-translate="USER" class="tile-title"></h3>
-<p>{{'Hello' | reverse}}</p>
+  <!-- <p>{{'Hello' | reverse}}</p> -->
   <table class="table table-striped">
     <thead>
       <tr>
@@ -9,7 +9,8 @@
         <th>User Name</th>
         <th>Location</th>
         <th>Age</th>
-        <!-- <th>Options</th> -->
+        <th>Email</th>
+        <th>Options</th>
       </tr>
     </thead>
     <tbody>
@@ -18,13 +19,14 @@
         <td data-ng-bind="user.username"></td>
         <td data-ng-bind="user.location"></td>
         <td data-ng-bind="user.age"></td>
-        <!-- <td><button>编辑</button></td> -->
+        <td data-ng-bind="user.email"></td>
+        <td><button>edit</button></td>
       </tr>
     </tbody>
   </table>
   <div class="form-group btn-container text-center">
     <input type="form-control" name="username" data-ng-model="$ctrl.nameFilter" />
-    <button class="btn btn-primary" data-ng-click="$ctrl.filterUserName()" placeholder="回车添加，设置日期点右侧" ng-keypress="($event.which === 13)?addTask():0">Filter</button>
+    <button class="btn btn-primary" data-ng-click="$ctrl.filterUserName()">Filter</button>
   </div>
 </div>
 
