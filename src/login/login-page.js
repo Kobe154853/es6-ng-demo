@@ -37,7 +37,7 @@ const controller = function (loginService) {
           log("login successfully,you are common user");
           location.href = '/pages/user/index.html';
         }
-        //log(loginUser.role == 1 ? "login successfully,you are admin" : "login successfully,you are common user");
+        log(loginUser.role == 1 ? "login successfully,you are admin" : "login successfully,you are common user");
         flag = true;
       }
     });
