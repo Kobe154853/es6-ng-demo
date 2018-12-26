@@ -14,11 +14,21 @@ const controller = function (userService,filterFilter) {
   this.nameFilter = 'admin';
   userService.fetch().then(resp => {
     // log(resp);
-    var roleid = location.search.substr(8, 1);
+    var flagvar = false;
+    var id = location.search.substr(4,1);
+    log(id);
+    var roleid = location.search.substr(11, 1);
     log(roleid);
     this.users = resp.data;
     this.allUsers = resp.data;
-    log(this.users);
+    log(this.users[id-1].username);
+    this.newname = this.users[id - 1].username;
+    log(flagvar);
+    if (roleid == 1) {
+      flagvar = true;
+    }
+    this.flagvar = flagvar;
+    this.roleid = roleid;
   })
   this.filterUserNameByRamda = function () {
     this.users = Ramda.filter(user => {

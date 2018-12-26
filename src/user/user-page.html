@@ -1,6 +1,6 @@
 
 <div class="tile">
-  <h3 data-translate="USER" class="tile-title"></h3>
+  <h3 data-ng-bind="$ctrl.newname" class="tile-title"></h3>
   <!-- <p>{{'Hello' | reverse}}</p> -->
   <table class="table table-striped">
     <thead>
@@ -10,7 +10,7 @@
         <th>Location</th>
         <th>Age</th>
         <th>Email</th>
-        <th>Options</th>
+      <th ng-show="$ctrl.flagvar">Options</th>
       </tr>
     </thead>
     <tbody>
@@ -20,7 +20,7 @@
         <td data-ng-bind="user.location"></td>
         <td data-ng-bind="user.age"></td>
         <td data-ng-bind="user.email"></td>
-        <td><button>edit</button></td>
+        <td ng-show="$ctrl.flagvar"><button>edit</button></td>
       </tr>
     </tbody>
   </table>

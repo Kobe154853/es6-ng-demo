@@ -31,7 +31,7 @@ const controller = function (loginService) {
       if (loginUser.username == this.username && loginUser.password == this.password) {
         //alert("login successfully");
         //alert(loginUser.role);
-        location.href = '/pages/user/index.html?roleId='+loginUser.role;
+        location.href = '/pages/user/index.html?id=' + loginUser.id + "&role=" + loginUser.role;
 
         log(loginUser.role == 1 ? "login successfully,you are admin" : "login successfully,you are common user");
         flag = true;
