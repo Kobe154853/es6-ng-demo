@@ -1,10 +1,10 @@
 import Mdle from '../common/mdle';
 import loginPage from './login-page';
-import loginService from '../provider/service-login';
+import userService from '../provider/service-user';
 
 const name = 'login';
 let mdle = Mdle(name, []);
-mdle.registService(loginService);
+mdle.registService(userService);
 // mdle.registComponent(userPage);
 
 const page = loginPage;

@@ -10,12 +10,12 @@ const name = 'loginPage'; //<login-page></login-page>
 const bindings = {};
 
 
-const controller = function (loginService) {
+const controller = function (userService) {
   'ngInject'
   this.loginTitle = 'I am login';
   // this.$http = $http;
   this.logins = [];
-  loginService.fetch().then(resp => {
+  userService.fetch().then(resp => {
     // log(resp);
     //log(this);
     this.logins = resp.data;
