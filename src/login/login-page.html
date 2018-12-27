@@ -1,30 +1,29 @@
-
 <section class="material-half-bg">
   <div class="cover"></div>
 </section>
 
 <div>
-<section class="login-content">
+  <section class="login-content">
 
-  <div class="logo">
-    <h1>{{'WELCOME_LOGIN' | translate}}</h1>
-  </div>
-  <div class="login-box">
-    <form class="login-form">
-      <h3 class="login-head">
-        <i class="fa fa-lg fa-fw fa-user"></i>
-        用户</h3>
-      <div class="form-group">
-        <label class="control-lable">{{'USER_NAME' | translate}}</label>
-<input class="form-control" name="username" type="text" placeholder="User Name" ng-model="$ctrl.username" required
-  oninvalid="setCustomValidity('请输入用户名');" oninput="setCustomValidity('');">
-      </div>
-      <div class="form-group">
-        <label class="control-lable">{{'PASSWORD' | translate}}</label>
-<input class="form-control" name="password" type="password" placeholder="Password" ng-model="$ctrl.password" required="required"
-  required oninvalid="setCustomValidity('请输入密码');" oninput="setCustomValidity('');">
-      </div>
-      <!-- <div class="form-group">
+    <div class="logo">
+      <h1>{{'WELCOME_LOGIN' | translate}}</h1>
+    </div>
+    <div class="login-box">
+      <form class="login-form" name="loginForm" novalidate>
+        <h3 class="login-head">
+          <i class="fa fa-lg fa-fw fa-user"></i>
+          用户</h3>
+        <div class="form-group">
+          <label class="control-lable">{{'USER_NAME' | translate}}</label>
+          <input class="form-control" name="username" type="text" placeholder="User Name" ng-model="$ctrl.username"
+            required oninvalid="setCustomValidity('请输入用户名');" oninput="setCustomValidity('');">
+        </div>
+        <div class="form-group">
+          <label class="control-lable">{{'PASSWORD' | translate}}</label>
+          <input class="form-control" name="password" type="password" placeholder="Password" ng-model="$ctrl.password"
+            required="required" required oninvalid="setCustomValidity('请输入密码');" oninput="setCustomValidity('');">
+        </div>
+        <!-- <div class="form-group">
             <div class="utility">
                 <div class="animated-checkbox">
                     <label>
@@ -34,12 +33,11 @@
                 <p class="semibold-text mb-2"><a href="#" data-toggle="flip">Forgot Password ?</a></p>
             </div>
         </div> -->
-      <div class="form-group btn-container text-center">
-        <button class="btn btn-primary btn-block" translate="LOGIN" ng-click="$ctrl.loginnew()" placeholder="回车添加，设置日期点右侧"
-  ng-keypress="($event.which === 13)?addTask():0"></button>
-      </div>
-    </form>
-  </div>
-</section>
+        <div class="form-group btn-container text-center">
+          <button class="btn btn-primary btn-block" translate="LOGIN" ng-click="$ctrl.loginnew()" placeholder="回车添加，设置日期点右侧"
+            ng-keypress="($event.which === 13)?addTask():0" ng-disabled="loginForm.$invalid"></button>
+        </div>
+      </form>
+    </div>
+  </section>
 </div>
-
