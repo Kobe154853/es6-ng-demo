@@ -38,6 +38,7 @@ const controller = function (userService) {
       }
     });
     if (!flag) {
+      alert("wrong username or password ");
       log("wrong username or password");
     }
     //   $http({
