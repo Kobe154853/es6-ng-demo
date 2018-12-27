@@ -28,6 +28,11 @@ const controller = function (userService) {
     // alert(password);
     var flag = false;
     this.logins.forEach(loginUser => {
+      // if (loginUser.username == "" || loginUser.password == "") {
+      //   //location.href = '/pages/login/index.html';
+      //   alert("wrong username or password ");
+      //   return;
+      // }
       if (loginUser.username == this.username && loginUser.password == this.password) {
         //alert("login successfully");
         //alert(loginUser.role);
@@ -39,7 +44,7 @@ const controller = function (userService) {
     });
     if (!flag) {
       alert("wrong username or password ");
-      log("wrong username or password");
+      // log("wrong username or password");
     }
     //   $http({
 
